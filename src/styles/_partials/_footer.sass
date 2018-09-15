@@ -1,0 +1,114 @@
+footer
+	.thanhtam-linkfooter
+		background: $ngoc
+		color: #7bfcff
+		h3
+			color: #093e64
+			font-size: 16px
+			text-align: left
+		ul
+			li
+				a
+					text-decoration: none
+					color: #7bfcff
+					&:hover,
+					&:active
+						color: white
+		.form-bot
+			background: #000
+			display: inline-block
+			padding: .3rem
+			width: 100%
+			//width: 320px
+			input
+				background: #000
+				padding: 0 .5rem
+				color: #fff
+				border: none
+				font-size: 1.2rem
+				// width: 100%
+				&:focus, &:active
+					outline: black
+			a
+				text-decoration: none
+				button
+					font-weight: bold
+					font-size: 1rem
+					line-height: 2rem
+					background: $ngoc
+					color: #093e64
+					border: none
+					width: 92px
+					height: 37px
+					transform: translateX(50%)
+					&:hover, &:active
+						background: lighten($ngoc, 30%)
+		+media-breakpoint-down(md)
+			.form-bot
+				width: auto
+				a
+					button
+						width: auto
+						height: auto
+						padding: 0 2rem
+						transform: translateX(0%)
+		+media-breakpoint-down(sm)
+			h3
+				text-align: center
+			p
+				color: white
+			ul
+				li
+					a
+						color: #fff
+						&:hover,
+						&:active
+							color: #7bfcff
+
+			.form-bot
+				margin-bottom:  1rem
+				input
+					font-size: 
+				a
+					button
+						width: auto
+						height: auto
+						padding: 0 1rem
+						transform: translateX(0%)
+						&:hover, &:active
+							background: $ngoc
+
+	.home-form
+		background: #093e64
+		padding: 1rem 0
+		color: white
+		h4
+			font-size: 1rem
+		.icon
+			margin-top: 1rem
+			a
+				text-decoration: none
+				color: #093e64
+				li
+					width: 2.79rem
+					height: 2.79rem
+					font-size: 1.2rem
+					line-height: 2.79rem
+					margin: 0 .26rem
+					background: #fff
+					border-radius: 50%
+					text-align: center
+					&:hover
+						background: darken(white, 15%)
+		+media-breakpoint-down(sm)
+			h4
+				font-size: .9rem
+			.icon
+				a
+					li
+						font-size: 1rem
+						line-height: 2rem
+						width: 2rem
+						height: 2rem
+						&:hover
+							background: white

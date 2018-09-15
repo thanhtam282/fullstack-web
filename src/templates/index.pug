@@ -1,0 +1,311 @@
+extends _layout/layout
+
+block variables
+	- var title = 'Home'
+	- var description = 'Description for home page'
+	- var bodyclass = 'home'
+
+block body
+	section.thanhtam-slider-top
+		.owl-carousel.owl-theme
+				.item
+					a(href="#")
+						figure
+							.bg_1
+								.title
+									.container
+										.row
+											.col
+												h1 Chúng tôi là Fullstack Vietnam 
+												p FullStack Developer là nghề cực hot hiện nay, những lập trình viên-
+													br
+													| Full Stack có đầy đủ các kĩ năng tổng hợp
+				.item
+					a(href="#")
+						figure
+							.bg_2
+								.title
+									.container
+										.row
+											.col
+												h1 Chúng tôi là Fullstack Vietnam 
+												p FullStack Developer là nghề cực hot hiện nay, những lập trình viên-
+													br
+													| Full Stack có đầy đủ các kĩ năng tổng hợp
+
+	section.thanhtam-news
+		.container
+			.row
+				.col.text-center.caption
+					.title
+						h2 TIN TỨC
+			.row
+				- for(x=1;x<4;x++)
+					.col-md-4
+						a(href="#")
+							figure
+								.blockimg
+									img(src="../img/home_about_"+x+".png", alt="")
+								figcaption
+									h2 aflkasdjflasjd
+									span.time 26/08/208
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro et deleniti, minima quidem eius sed deserunt fugiat vel cum recusandae quo odio culpa voluptate inventore ea dolorum id perspiciatis omnis.
+
+
+	section.thanhtam-vision
+		figure
+			.bg-vision
+				.container
+					.row
+						.col.text-center.caption
+							.title
+								h2 ĐỊNH HƯỚNG PHÁT TRIỂN
+					.row.pb-sm-4
+						.col-md-3.col-sm-6.text-center.text-md-left
+							a(href="#")
+								i.fa.fa-copy
+								h3 TẦM NHÌN
+								p Cam kết chất lượng sản phẩm cao nhất
+									br 
+									| Luôn đặt chữ tín lên hàng đầu
+									br 
+									| Lấy lợi ích của khách hàng làm trung tâm hoạt động
+						.col-md-3.col-sm-6.text-center.text-md-left.pb-sm-4
+							a(href="#")
+								i.fa.fa-copy
+								h3 TẦM NHÌN
+								p Cam kết chất lượng sản phẩm cao nhất
+									br 
+									| Luôn đặt chữ tín lên hàng đầu
+									br 
+									| Lấy lợi ích của khách hàng làm trung tâm hoạt động
+						.col-md-3.col-sm-6.text-center.text-md-left.pb-sm-4
+							a(href="#")
+								i.fa.fa-object-group
+								h3 TẦM NHÌN
+								p Cam kết chất lượng sản phẩm cao nhất
+									br 
+									| Luôn đặt chữ tín lên hàng đầu
+									br 
+									| Lấy lợi ích của khách hàng làm trung tâm hoạt động
+						.col-md-3.col-sm-6.text-center.text-md-left.pb-sm-4
+							a(href="#")
+								i.fa.fa-save
+								h3 TẦM NHÌN
+								p Cam kết chất lượng sản phẩm cao nhất
+									br 
+									| Luôn đặt chữ tín lên hàng đầu
+									br 
+									| Lấy lợi ích của khách hàng làm trung tâm hoạt động
+
+	section.thanhtam-more
+		figure
+			.bg-more
+				.container
+					.row
+						.col.text-center
+							.title
+								h3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vel labo-
+									br
+									|rum, dolorum dicta soluta repellendus minus perferendis excepturi 
+									br
+									|obcaecati porro facere, voluptatem ipsum eum
+							.btn-more
+								button.btn.btn-light XEM THÊM
+
+	section.thanhtam-target
+		.container
+			.row
+				.col.caption.text-center
+					.title.mb-sm-0
+						h2 ĐỊNH HƯỚNG PHÁT TRIỂN
+			.row
+				.col
+					ul.list-unstyled.list-inline.text-center
+						li.list-inline-item.sm-6
+							a(href="#") TẤT CẢ
+						li.list-inline-item.sm-6
+							a(href="#") GROUP
+						li.list-inline-item.sm-6
+							a(href="#") TIN THỊ TRƯỜNG
+						li.list-inline-item.sm-6
+							a(href="#") TIN VỊT
+			.row
+				.col-sm-4.text-center
+					figure
+						a(href="#")
+							img.img-fluid(src="../img/home_about_3.png", alt="")
+				.col-sm-4.text-center
+					figure
+						a(href="#")
+							img.img-fluid(src="../img/home_about_3.png", alt="")
+				.col-sm-4.text-center
+					figure
+						a(href="#")
+							img.img-fluid(src="../img/home_about_3.png", alt="")
+
+	section.thanhtam-client
+		figure
+			.bg-client
+				.container
+					.row
+						.col.text-center.caption
+							.title
+								h2 KHÁCH HÀNG NÓI
+					.row
+						.col
+							.owl-carousel.owl-theme.text-center
+								- for(x=0;x<3;x++)
+									.item
+										figure
+											img.img-fluid(src="../img/home_avatar.png", alt="")
+										figcaption
+											p 
+												| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac condi-
+												br
+												| mentum mi, vitae iaculis ante. Suspendisse viverra urna quis diam sodales,
+												br
+												| convallis auctor nibh.
+											h3 Pelican Steve
+											h4 CEO ABC Company
+
+	section.home-slider
+		.container
+			.row
+				.col.owl-carousel
+					.item
+						a(href="#")
+							figure
+								img(src="./img/home_client_1.png", alt="")
+					.item
+						a(href="#")
+							figure
+								img(src="./img/home_client_2.png", alt="")
+					.item
+						a(href="#")
+							figure
+								img(src="./img/home_client_3.png", alt="")
+					.item
+						a(href="#")
+							figure
+								img(src="./img/home_client_4.png", alt="")
+					.item
+						a(href="#")
+							figure
+								img(src="./img/home_client_5.png", alt="")
+					.item
+						a(href="#")
+							figure
+								img(src="./img/home_client_6.png", alt="")
+					.item
+						a(href="#")
+							figure
+								img(src="./img/home_client_1.png", alt="")
+					.item
+						a(href="#")
+							figure
+								img(src="./img/home_client_2.png", alt="")
+
+
+										
+	//- section.shop
+		.container
+			.row
+				.col-md-9.order-md-1
+					.row
+						- for (x=0;x<9;x++)
+							.col-sm-6.text-xs-centeol-lg-4.text-md-left.pb-sm-4
+								figure
+									if (x == 3 || x == 5 || x == 7)
+										img.img-fluid(src="./img/home_photo_1.png", alt="")
+										figcaption
+											h3 product
+											.price $30
+											.desc asdf asdf asdf asdsdfgsd sdfgfsdg sdfg dfg dgdfh gdfgf
+									else
+										img.img-fluid(src="./img/home_photo_2.png", alt="")
+										figcaption
+											h3 product
+											.price $30
+											.desc asdf asdf asdf asdf
+				.col-md-3.order-md-0
+					.list-group
+						- for (x=0;x<9;x++)
+							a.list-group-item.list-group-item-action(href="#") Demo new
+
+
+
+
+	//- .container
+		.row
+			.col-lg-8.col-md-12
+				.row
+					.col-sm-12.col-md-12.col-lg-6
+						.row
+							.col-md-6
+								figure
+									img.img-fluid(src="./img/home_photo_1.png", alt="")
+							.col-md-6.col-lg-12
+								.row
+									.col-4
+										figure
+											img.img-fluid(src="./img/logo.png", alt="")
+									.col-8
+										p Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quaerat provident, 
+								.row
+									.col-4
+										figure
+											img.img-fluid(src="./img/logo.png", alt="")
+									.col-8
+										p Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quaerat provident, 
+					.col-sm-12.col-md-12.col-lg-6
+						.row
+							.col-md-6
+								figure
+									img.img-fluid(src="./img/home_photo_1.png", alt="")
+							.col-md-6.col-lg-12
+								.row
+									.col-4
+										figure
+											img.img-fluid(src="./img/logo.png", alt="")
+									.col-8
+										p Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quaerat provident, 
+								.row
+									.col-4
+										figure
+											img.img-fluid(src="./img/logo.png", alt="")
+									.col-8
+										p Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quaerat provident, 
+			.col-lg-4.col-md-12
+				.row
+					.col-md-6
+						h3 asdfasdfasdf dsfgsdf s afsdfsdf dfsdfsdf sdf sdfsdfs sdf sdfsd fsdfsdf 
+					.col-md-6
+						p tam taha tmat at atm atm atm atm tam tam Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga facere non cupiditate quo? Blanditiis eligendi aliquam dignissimos architecto, labore eveniet sequi neque sit! Nesciunt porro, alias fugiat eligendi dolore saepe.
+	//- section.home-nay
+	//- 	//- ul
+	//- 		//- li.item(data-name='000000')
+	//- 		//- 	a(href="javascript:void(0)" onclick="alert('tam dep trai')") HEHEH
+	//- 		//- li.item.active(data-name='11111') tamnguyen
+	//- 		//- li.item(data-name='2222222222') thanh tahnh
+	//- 		//- li.item(data-name='3333333') nguyen nguyen
+	//- 		//- li.item.nguyen(data-name='44444444') tran tran
+	//- 	.item
+	//- 		.title
+	//- 			i.fa.fa-home
+	//- 			|
+	//- 			| Title Here
+	//- 		.body Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex a perspiciatis, architecto molestias vero ist
+	//- 	.item
+	//- 		.title
+	//- 			i.fa.fa-home
+	//- 			|
+	//- 			| Title Here
+	//- 		.body Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex a perspiciatis, architecto molestias vero ist
+	//- 	.item
+	//- 		.title
+	//- 			i.fa.fa-home
+	//- 			|
+	//- 			| Title Here
+	//- 		.body Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex a perspiciatis, architecto molestias vero ist
+

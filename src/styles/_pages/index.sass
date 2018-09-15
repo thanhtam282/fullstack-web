@@ -1,0 +1,368 @@
+// .home-nay
+// 	+pad(3rem)
+// .shop
+// 	figure
+// 		padding: 1rem
+// 		height: 100%
+// 		&:hover
+// 			box-shadow: inset 0px 0px 0px 3px red
+// 	// img
+// 	// 	display: flex
+
+.thanhtam-slider-top
+	.owl-carousel
+		figure
+			margin: 0
+			.bg_1,.bg_2
+				background-position: center center
+				background-size: cover
+				min-height: 500px
+				background-image:  url(../img/home_slider_1.png)
+				position: relative
+				.title
+					position: absolute
+					bottom: 0
+					left: 0
+					width: 100%
+					height: 100%
+					display: flex
+					align-items: flex-end
+					color: #fff
+					text-align: center
+					background-image: linear-gradient(transparent 50%, black)
+					h1
+						font-size: 2.57rem
+						margin-bottom: 1rem
+					p
+						font-size: 1.29rem
+						margin-bottom: 2.5rem
+
+			.bg_2
+				background-image:  url(../img/home_slider_2.png)
+		.owl-nav
+			margin-top: 0
+			button
+				// margin-top: 10px
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				&.owl-prev
+					left: 1rem
+				&.owl-next
+					right: 1rem
+			.fa
+				background: black
+				padding: 1rem
+				color: white
+				font-size: 1.2rem
+				padding: 1rem
+			+media-breakpoint-up(md)
+				.fa
+					&:hover, &:active
+						background: $ngoc
+				button
+					&.owl-prev
+						left: 2.6rem
+					&.owl-next
+						right: 2.6rem
+
+	
+.caption
+	.title
+		position: relative
+		h2
+			font-weight: bold
+			padding-top: 4.79rem
+			margin-bottom: 2.93rem
+		&:before
+			background: $ngoc
+			content: ""
+			display: block
+			width: 5.14rem
+			height: .21rem
+			position: absolute
+			z-index: 1
+			bottom: -7px
+			transform: translateX(-50%)
+			left: 50%
+		&:after
+			top: 99%
+			left: 50%
+			background: #fff
+			border: 2px solid $ngoc
+			content: ""
+			display: block
+			width: 1rem
+			height: 1rem
+			position: absolute
+			z-index: 1
+			bottom: -7px
+			transform: translateX(-50%)
+			border-radius: 50%
+.thanhtam-news
+	a
+		text-decoration: none
+		figure
+			img
+				filter: grayscale(0%)
+				width: 100%
+
+		figcaption
+			h2
+				color: $ngoc
+				margin-top: .75rem
+			p
+				color: black
+				margin-bottom: 2.2rem
+
+	+media-breakpoint-up(md)
+		a
+			figure
+				.blockimg
+					position: relative
+					img
+						width: 100%
+						transition: .5s all ease-in-out
+						filter: grayscale(100%)
+					&:before
+						transition: .5s all ease-in-out
+						content: ""
+						display: block
+						width: 100%
+						height: 100%
+						position: absolute
+						z-index: 1
+				figcaption
+					h2
+						color: #000
+						font-size: 1.2rem
+						margin-top: 1rem
+						margin-bottom: 0
+					.time
+						color: #afafaf
+					p
+						color: #afafaf
+						padding-top: 1rem
+
+			&:hover,&:active
+				figure
+					.blockimg
+						img
+							filter: grayscale(0%)
+						&:before
+							box-shadow: 0px 0px 0px 3px $ngoc inset
+				figcaption
+					h2
+						color: $ngoc
+					p
+						color: black
+
+.thanhtam-vision
+	figure
+		margin-bottom: 0
+		.bg-vision
+			background-position: center center
+			background-size: cover
+			min-height: 500px
+			background-image:  url(../img/home_vision.png)
+			// opacity: 0.2
+			z-index: -1
+			// filter: grayscale(100%)
+			a
+				text-decoration: none
+				color: #000
+				i
+					font-size: 60px
+				h3
+					padding-top: 2.64rem
+					font-size: .9rem
+				p
+					padding-top: 1rem
+					color: #8d8d8d
+					font-size: .9rem
+			+media-breakpoint-up(md)
+				a
+					h
+						font-size: 1rem
+					p
+						font-size: 1rem
+					&:hover, &:active
+						i,h3
+							color: $ngoc
+
+.thanhtam-more
+	figure
+		.bg-more
+			background-position: center center
+			background-size: cover
+			min-height: 315px
+			background-image:  url(../img/home_more.png)
+			display: flex
+			justify-content: center
+			align-items: center
+			// opacity: 0.2
+			z-index: -1
+			// filter: grayscale(100%)
+
+			.title
+				h3
+					color: white
+					font-size: 1.2rem
+					white-space: nowrap
+					margin-bottom: 1.5rem
+			.btn-more
+				button
+					border-radius: 1.89rem
+					border: none
+					height: 30px
+					width: 110px
+					background: $ngoc
+					color: white
+					font-weight: bold
+					font-size: 1rem
+				//	max-width: 300px
+			+media-breakpoint-up(md)
+				.title
+					h3
+						font-size: 1.71rem
+						margin-bottom: 3.71rem
+				.btn-more
+					button
+						border-radius: 1.89rem
+						height: 53px
+						width: 220px
+						font-size: 1.29rem
+						&:hover,&:active
+							background: lighten($ngoc, 30%)
+							color: darken($ngoc, 30%)
+				//	max-width: 300px
+
+.thanhtam-target
+	margin-bottom: 3rem
+	ul
+		li
+			display: inline-block
+			padding: .36rem .93rem
+			a
+				text-decoration: none
+				font-weight: bold
+				color: #000
++media-breakpoint-up(md)
+	.thanhtam-target
+		margin-bottom: 7.64rem
+		.title
+			h2
+		ul
+			li
+				&:hover, &:active
+					background: $ngoc
+					border-radius: 1.5rem
+					a
+						color: white
+		figure
+			position: relative
+			a
+				img
+					filter: grayscale(100%)
+					width: 100%
+					transition: .5s all ease-in-out
+				&:before
+					transition: .5s all ease-in-out
+					content: ""
+					display: block
+					width: 100%
+					height: 100%
+					position: absolute
+					z-index: 1
+				&:hover, &:active
+					img
+						filter: grayscale(0%)
+					&:before
+						box-shadow: 0px 0px 0px 3px $ngoc inset
+
+.thanhtam-client
+	figure
+		.bg-client
+			background-position: center center
+			background-size: cover
+			min-height: 543px
+			background-image:  url(../img/home_background.jpg)
+			display: flex
+			justify-content: center
+			align-items: center
+			// opacity: 0.2
+			z-index: -1
+			// filter: grayscale(100%)	
+		.owl-carousel
+			figure
+				img
+					width: 12rem
+					margin-right: auto
+					margin-left: auto
+	figcaption
+		p
+			font-style: italic
+
+.home-slider
+	padding-top: 40px
+	padding-bottom: 4.29rem
+
+
+	.owl-carousel
+		margin-top: 2.7rem
+		figure
+			margin: 0
+			img
+				// opacity: 0.5
+				width: 100%
+		.item
+			&:hover
+				img
+					// opacity: 1
+	.owl-nav
+		button
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			&.owl-prev
+				background: #093e64
+				color: white
+				left: -1rem	
+				border-radius: 1px
+				height: 1.79rem
+				width: 1.79rem
+				font-size: .9rem
+				.fa
+					//padding: .5rem
+			&.owl-next
+				color: white
+				background: #093e64
+				right: -1rem
+				height: 1.79rem
+				width: 1.79rem
+			&:hover,
+			&:active
+				background: lighten(#093e64,20%)
+
++media-breakpoint-down(sm)
+	.home-slider
+		padding-bottom: 2rem
+		.owl-carousel
+			figure
+				img
+					// opacity: 1
+		.owl-nav
+			padding-top: 2.5rem
+			padding-bottom: 0
+			text-align: center
+			button
+				position: relative
+				&.owl-next
+					margin-left: .25rem
+					right: 0
+				&.owl-prev
+					left: 0
+					margin-right: .25rem
+				&:hover,
+				&:active
+					background: #093e64
