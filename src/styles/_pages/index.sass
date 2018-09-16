@@ -9,16 +9,29 @@
 // 	// img
 // 	// 	display: flex
 
+
+// mixxin
+
+=center($direct: row)
+	display: flex
+	justify-content: center
+	align-items: center
+	text-align: center
+	flex-direction: $direct
+
+=bg-img($scr : "../img/home_slider_1.png", $hi: 200px)
+	background-position: center center
+	background-size: cover
+	min-height: $hi
+	position: relative
+	background-image:  url($scr)
+
 .thanhtam-slider-top
 	.owl-carousel
 		figure
 			margin: 0
 			.bg_1,.bg_2
-				background-position: center center
-				background-size: cover
-				min-height: 500px
-				background-image:  url(../img/home_slider_1.png)
-				position: relative
+				+bg-img("../img/home_slider_1.png", 500px)
 				.title
 					position: absolute
 					bottom: 0
@@ -30,15 +43,25 @@
 					color: #fff
 					text-align: center
 					background-image: linear-gradient(transparent 50%, black)
-					h1
-						font-size: 2.57rem
-						margin-bottom: 1rem
-					p
-						font-size: 1.29rem
-						margin-bottom: 2.5rem
+					.col
+						+center(column)
+						h1
+							font-size: 2.57rem
+							margin-bottom: 1rem
+						p
+							font-size: 1.29rem
+							margin-bottom: 2.5rem
+							width: 95%
 
 			.bg_2
 				background-image:  url(../img/home_slider_2.png)
+		+media-breakpoint-up(md)
+			figure
+				.bg_1,.bg_2
+					.title
+						.col
+							p
+								width: 48%
 		.owl-nav
 			margin-top: 0
 			button
@@ -56,7 +79,8 @@
 				color: white
 				font-size: 1.2rem
 				padding: 1rem
-			+media-breakpoint-up(md)
+		+media-breakpoint-up(md)
+			.owl-nav
 				.fa
 					&:hover, &:active
 						background: $ngoc
@@ -110,10 +134,19 @@
 		figcaption
 			h2
 				color: $ngoc
-				margin-top: .75rem
+				font-size: 1.2rem
+				//margin-top: .75rem
 			p
 				color: black
 				margin-bottom: 2.2rem
+				height: 4.9rem
+				line-height: 1.25rem
+				font-size: .9rem
+				overflow: hidden
+				
+		&:hover, &:active
+			color: #1e7bff
+				
 
 	+media-breakpoint-up(md)
 		a
@@ -138,11 +171,15 @@
 						font-size: 1.2rem
 						margin-top: 1rem
 						margin-bottom: 0
+						transition: .5s all ease-in-out
 					.time
 						color: #afafaf
 					p
+						transition: .5s all ease-in-out
 						color: #afafaf
 						padding-top: 1rem
+						line-height: 1.3rem
+						font-size: 1rem
 
 			&:hover,&:active
 				figure
@@ -205,10 +242,11 @@
 			// filter: grayscale(100%)
 
 			.title
+				+center(column)
 				h3
 					color: white
 					font-size: 1.2rem
-					white-space: nowrap
+					width: 100%
 					margin-bottom: 1.5rem
 			.btn-more
 				button
@@ -224,6 +262,7 @@
 			+media-breakpoint-up(md)
 				.title
 					h3
+						width: 68%
 						font-size: 1.71rem
 						margin-bottom: 3.71rem
 				.btn-more
@@ -240,9 +279,14 @@
 .thanhtam-target
 	margin-bottom: 3rem
 	ul
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		align-items: center
 		li
 			display: inline-block
 			padding: .36rem .93rem
+			flex: 0 0 45%
 			a
 				text-decoration: none
 				font-weight: bold
@@ -253,7 +297,9 @@
 		.title
 			h2
 		ul
+			display: block
 			li
+				padding: .36rem .93rem
 				&:hover, &:active
 					background: $ngoc
 					border-radius: 1.5rem
@@ -283,25 +329,37 @@
 .thanhtam-client
 	figure
 		.bg-client
-			background-position: center center
-			background-size: cover
-			min-height: 543px
-			background-image:  url(../img/home_background.jpg)
-			display: flex
-			justify-content: center
-			align-items: center
+			// background-position: center center
+			// background-size: cover
+			// min-height: 543px
+			// background-image:  url(../img/home_background.jpg)
+			// display: flex
+			// justify-content: center
+			// align-items: center
 			// opacity: 0.2
-			z-index: -1
-			// filter: grayscale(100%)	
+			// z-index: -1
+			// filter: grayscale(100%)
+			+bg-img("../img/home_background.jpg", 543px)
 		.owl-carousel
 			figure
 				img
 					width: 12rem
 					margin-right: auto
 					margin-left: auto
+			.owl-dots
+				margin-bottom: 3rem
+		+media-breakpoint-down(sm)
+			.owl-carousel
+				.owl-dots
+					.owl-dot
+						span
+							&:hover, &:active
+								background: #d6d6d6
 	figcaption
+		+center(column)
 		p
 			font-style: italic
+			width: 62%
 
 .home-slider
 	padding-top: 40px
